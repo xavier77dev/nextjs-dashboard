@@ -1,3 +1,6 @@
+import { montserrat } from "./ui/fonts";
+import "./ui/global.css"
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <h1>Este es el Título</h1>
+
+        <div className={`${montserrat.className} antialiased`}>
+          {children}
+        </div>
+
+        <footer>xavier basurto</footer>
+      </body>
     </html>
   );
 }
